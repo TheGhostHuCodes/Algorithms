@@ -4,13 +4,6 @@ import (
 	"fmt"
 )
 
-type node uint
-
-type edge struct {
-	first  node
-	second node
-}
-
 // The quick-find algorithm executes at least M*N instructions, where N is the
 // number of nodes in the problem, and M is the number of union operations.
 func QuickFind(N int, edges []edge) {
