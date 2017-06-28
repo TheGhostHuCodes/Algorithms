@@ -11,6 +11,7 @@ func main() {
 		edge{1, 3},
 	}
 	QuickFind(len(input), input)
+	QuickUnion(len(input), input)
 
 	input2 := []edge{
 		edge{3, 4},
@@ -26,4 +27,5 @@ func main() {
 		edge{6, 1},
 	}
 	QuickFind(len(input2), input2)
+	QuickUnion(len(input2), input2)
 }
