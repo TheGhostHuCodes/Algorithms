@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"log"
 	"os"
+	"path/filepath"
 )
 
 type graph struct {
@@ -27,12 +28,13 @@ func loadGraph(path string) graph {
 }
 
 func main() {
-	gr := loadGraph("input.json")
+	testDataPath := "../test_data/"
+	gr := loadGraph(filepath.Join(testDataPath, "graphs/input.json"))
 	input := gr.Input
 	QuickFind(len(input), input)
 	QuickUnion(len(input), input)
 
-	gr2 := loadGraph("input2.json")
+	gr2 := loadGraph(filepath.Join(testDataPath, "graphs/input2.json"))
 	input2 := gr2.Input
 	QuickFind(len(input2), input2)
 	QuickUnion(len(input2), input2)
