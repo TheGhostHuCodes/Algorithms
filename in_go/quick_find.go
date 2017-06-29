@@ -3,7 +3,7 @@ package main
 // The quick-find algorithm executes at least M*N instructions, where N is the
 // number of nodes in the problem, and M is the number of union operations.
 func QuickFind(N int, edges []edge) []edge {
-	id := make([]int, N, N)
+	id := make([]int, N)
 	for i := 0; i < N; i++ {
 		id[i] = i
 	}

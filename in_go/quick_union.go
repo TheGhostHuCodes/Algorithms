@@ -3,7 +3,7 @@ package main
 // QuickUnion executes unions quickly by updating a single connection to form
 // the union of two disconnected sets of nodes.
 func QuickUnion(N int, edges []edge) []edge {
-	id := make([]node, N, N)
+	id := make([]node, N)
 	for i := 0; i < N; i++ {
 		id[i] = node(i)
 	}
