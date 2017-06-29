@@ -1,31 +1,39 @@
 package main
 
-func main() {
-	input := []edge{
-		edge{0, 2},
-		edge{1, 4},
-		edge{2, 5},
-		edge{3, 6},
-		edge{0, 4},
-		edge{6, 0},
-		edge{1, 3},
+import (
+	"encoding/json"
+	"log"
+	"os"
+)
+
+type graph struct {
+	Input  []edge
+	Result []edge
+}
+
+func loadGraph(path string) graph {
+	f, err := os.Open(path)
+	if err != nil {
+		log.Fatalf("Could not open JSON file.\nError: %s\n", err)
 	}
+	dec := json.NewDecoder(f)
+	var g graph
+	err = dec.Decode(&g)
+	f.Close()
+	if err != nil {
+		log.Fatalf("Could not decode JSON file.\nError: %s\n", err)
+	}
+	return g
+}
+
+func main() {
+	gr := loadGraph("input.json")
+	input := gr.Input
 	QuickFind(len(input), input)
 	QuickUnion(len(input), input)
 
-	input2 := []edge{
-		edge{3, 4},
-		edge{4, 9},
-		edge{8, 0},
-		edge{2, 3},
-		edge{5, 6},
-		edge{2, 9},
-		edge{5, 9},
-		edge{7, 3},
-		edge{4, 8},
-		edge{5, 6},
-		edge{6, 1},
-	}
+	gr2 := loadGraph("input2.json")
+	input2 := gr2.Input
 	QuickFind(len(input2), input2)
 	QuickUnion(len(input2), input2)
 }

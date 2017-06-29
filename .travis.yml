@@ -3,4 +3,4 @@ language: go
 go:
     - 1.8.x
 
-script: go build -o algorithms_in_go github.com/TheGhostHuCodes/Algorithms/in_go && ./algorithms_in_go
+script: cd in_go/ && go build && ./in_go

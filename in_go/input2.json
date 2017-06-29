@@ -1,0 +1,86 @@
+{
+    "Input": [
+        {
+            "First": 3,
+            "Second": 4
+        },
+        {
+            "First": 4,
+            "Second": 9
+        },
+        {
+            "First": 8,
+            "Second": 0
+        },
+        {
+            "First": 2,
+            "Second": 3
+        },
+        {
+            "First": 5,
+            "Second": 6
+        },
+        {
+            "First": 2,
+            "Second": 9
+        },
+        {
+            "First": 5,
+            "Second": 9
+        },
+        {
+            "First": 7,
+            "Second": 3
+        },
+        {
+            "First": 4,
+            "Second": 8
+        },
+        {
+            "First": 5,
+            "Second": 6
+        },
+        {
+            "First": 6,
+            "Second": 1
+        }
+    ],
+    "Result": [
+        {
+            "First": 3,
+            "Second": 4
+        },
+        {
+            "First": 4,
+            "Second": 9
+        },
+        {
+            "First": 8,
+            "Second": 0
+        },
+        {
+            "First": 2,
+            "Second": 3
+        },
+        {
+            "First": 5,
+            "Second": 6
+        },
+        {
+            "First": 5,
+            "Second": 9
+        },
+        {
+            "First": 7,
+            "Second": 3
+        },
+        {
+            "First": 4,
+            "Second": 8
+        },
+        {
+            "First": 6,
+            "Second": 1
+        }
+    ]
+}
