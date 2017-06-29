@@ -7,6 +7,11 @@ type edge struct {
 	Second node
 }
 
+type graph struct {
+	Input  []edge
+	Result []edge
+}
+
 func edgesEqual(a []edge, b []edge) bool {
 	if len(a) != len(b) {
 		return false
