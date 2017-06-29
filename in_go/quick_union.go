@@ -1,26 +1,23 @@
 package main
 
-import (
-	"fmt"
-)
-
 // QuickUnion executes unions quickly by updating a single connection to form
 // the union of two disconnected sets of nodes.
-func QuickUnion(N int, edges []edge) {
-	id := make([]node, N, N)
+func QuickUnion(N int, edges []edge) []edge {
+	id := make([]node, N)
 	for i := 0; i < N; i++ {
 		id[i] = node(i)
 	}
+	var result []edge
 	for _, e := range edges {
 		i := findRoot(e.First, id)
 		j := findRoot(e.Second, id)
 		// These nodes are not yet connected.
 		if i != j {
 			id[i] = j
-			fmt.Printf("%d-%d\n", e.First, e.Second)
+			result = append(result, e)
 		}
 	}
-	fmt.Printf("\n")
+	return result
 }
 
 // findRoot finds the root of a given node in a set of trees and returns the
