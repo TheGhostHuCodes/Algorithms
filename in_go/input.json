@@ -1,0 +1,58 @@
+{
+    "Input": [
+        {
+            "First": 0,
+            "Second": 2
+        },
+        {
+            "First": 1,
+            "Second": 4
+        },
+        {
+            "First": 2,
+            "Second": 5
+        },
+        {
+            "First": 3,
+            "Second": 6
+        },
+        {
+            "First": 0,
+            "Second": 4
+        },
+        {
+            "First": 6,
+            "Second": 0
+        },
+        {
+            "First": 1,
+            "Second": 3
+        }
+    ],
+    "Result": [
+        {
+            "First": 0,
+            "Second": 2
+        },
+        {
+            "First": 1,
+            "Second": 4
+        },
+        {
+            "First": 2,
+            "Second": 5
+        },
+        {
+            "First": 3,
+            "Second": 6
+        },
+        {
+            "First": 0,
+            "Second": 4
+        },
+        {
+            "First": 6,
+            "Second": 0
+        }
+    ]
+}

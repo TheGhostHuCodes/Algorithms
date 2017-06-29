@@ -6,4 +6,4 @@ by Robert Sedgewick.
 
 Instead of doing them in C++ though, I'm going through and implementing the algorithms in:
 
-- Go
+- Go [![Build Status](https://travis-ci.org/TheGhostHuCodes/Algorithms.svg?branch=master)](https://travis-ci.org/TheGhostHuCodes/Algorithms)

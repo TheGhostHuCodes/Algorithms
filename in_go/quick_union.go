@@ -12,12 +12,12 @@ func QuickUnion(N int, edges []edge) {
 		id[i] = node(i)
 	}
 	for _, e := range edges {
-		i := findRoot(e.first, id)
-		j := findRoot(e.second, id)
+		i := findRoot(e.First, id)
+		j := findRoot(e.Second, id)
 		// These nodes are not yet connected.
 		if i != j {
 			id[i] = j
-			fmt.Printf("%d-%d\n", e.first, e.second)
+			fmt.Printf("%d-%d\n", e.First, e.Second)
 		}
 	}
 	fmt.Printf("\n")

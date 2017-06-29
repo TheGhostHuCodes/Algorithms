@@ -12,17 +12,17 @@ func QuickFind(N int, edges []edge) {
 		id[i] = i
 	}
 	for _, e := range edges {
-		t := id[e.first]
-		if t == id[e.second] {
+		t := id[e.First]
+		if t == id[e.Second] {
 			// These nodes have already been connected.
 			continue
 		} else {
 			for i := range id {
 				if id[i] == t {
-					id[i] = id[e.second]
+					id[i] = id[e.Second]
 				}
 			}
-			fmt.Printf("%d-%d\n", e.first, e.second)
+			fmt.Printf("%d-%d\n", e.First, e.Second)
 		}
 	}
 	fmt.Printf("\n")
